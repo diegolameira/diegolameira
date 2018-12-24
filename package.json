@@ -3,10 +3,22 @@
   "version": "1.0.0",
   "description": "My own professional webpage",
   "author": "Diego Lameira <diegolameira@me.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "^2.1.2"
   },
   "devDependencies": {
     "eslint": "5.11.0",
@@ -18,5 +30,10 @@
     "prettier": "1.15.3",
     "pretty-quick": "1.8.0"
   },
-  "license": "MIT"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
