@@ -3,5 +3,20 @@
   "version": "1.0.0",
   "description": "My own professional webpage",
   "author": "Diego Lameira <diegolameira@me.com>",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "eslint": "5.11.0",
+    "eslint-config-last": "0.0.5",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-react": "7.11.1",
+    "husky": "1.2.1",
+    "prettier": "1.15.3",
+    "pretty-quick": "1.8.0"
+  },
   "license": "MIT"
 }
