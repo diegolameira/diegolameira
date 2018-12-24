@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "My own professional webpage",
   "author": "Diego Lameira <diegolameira@me.com>",
+  "homepage": "http://diegolameira.github.io/diegolameira",
   "license": "MIT",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -28,6 +31,7 @@
     "eslint-config-prettier": "3.3.0",
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "7.11.1",
+    "gh-pages": "^2.0.1",
     "husky": "1.2.1",
     "prettier": "1.15.3",
     "pretty-quick": "1.8.0"
