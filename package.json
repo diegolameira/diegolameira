@@ -6,7 +6,7 @@
   "homepage": "https://diegolameira.me",
   "license": "MIT",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo 'diegolameira.me' > ./build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
