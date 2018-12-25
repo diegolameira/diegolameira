@@ -23,9 +23,9 @@ export default class Main extends Component {
 
   render() {
     const {
-      profile: { resume }
+      profile: { posts }
     } = this.props;
-    return this.extractData(resume);
+    return this.extractData(posts);
   }
 }
 

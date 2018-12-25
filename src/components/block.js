@@ -21,7 +21,7 @@ export default class Block extends PureComponent {
         </h2>
         <h3>{subtitle}</h3>
         <p>{description}</p>
-        {tags.map(tag => (
+        {(tags || []).map(tag => (
           <Pill key={`box-${id}-${tag}`}>{tag}</Pill>
         ))}
       </Box>

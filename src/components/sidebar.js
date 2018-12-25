@@ -7,12 +7,12 @@ import Filter from '../components/filter';
 export default class Sidebar extends Component {
   render() {
     const {
-      profile: { description, pictureUrl, displayName, resume },
+      profile: { description, pictureUrl, displayName, posts },
       filters,
       toggleFilter
     } = this.props;
 
-    const tags = uniq(flatten(resume.map(i => i.tags)));
+    const tags = uniq(flatten(posts.map(i => i.tags || [])));
 
     return (
       <>
