@@ -4,11 +4,11 @@ Just my own professional webpage
 
 ## Built With
 
-* [ReactJS](https://reactjs.org/) - The UI javascript library used
+- [ReactJS](https://reactjs.org/) - The UI javascript library used
 
 ## Authors
 
-* **Diego Lameira** - [diegolameira](https://github.com/diegolameira)
+- **Diego Lameira** - [diegolameira](https://diegolameira.me)
 
 ## License
 

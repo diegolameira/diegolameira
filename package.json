@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My own professional webpage",
   "author": "Diego Lameira <diegolameira@me.com>",
-  "homepage": "http://diegolameira.github.io/diegolameira",
+  "homepage": "https://diegolameira.me",
   "license": "MIT",
   "scripts": {
     "predeploy": "npm run build",
