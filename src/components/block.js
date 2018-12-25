@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
 
 import Pill from '../components/pill';
 
@@ -20,7 +21,7 @@ export default class Block extends PureComponent {
           {title} <em>{`${startDate} ~ ${endDate}`}</em>
         </h2>
         <h3>{subtitle}</h3>
-        <p>{description}</p>
+        <ReactMarkdown source={description} />
         {(tags || []).map(tag => (
           <Pill key={`box-${id}-${tag}`}>{tag}</Pill>
         ))}
