@@ -76,7 +76,9 @@ const parseProfile = profile => {
 };
 
 const parseDate = date =>
-  DateTime.fromISO(date).toLocaleString({ month: 'long', year: 'numeric' });
+  DateTime.setLocale('en')
+    .fromISO(date)
+    .toLocaleString({ month: 'long', year: 'numeric' });
 
 const query = id => gql`
 {
