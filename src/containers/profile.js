@@ -89,7 +89,7 @@ const query = id => gql`
     picture {
       url
     }
-    posts {
+    posts(sort: "startDate:desc") {
       title
       subtitle
       startDate
