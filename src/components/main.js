@@ -32,7 +32,7 @@ export default class Main extends Component {
 const Blocks = ({ title, items }) => (
   <>
     <h1 className="sticky">{title}</h1>
-    <Masonry brakePoints={[350, 500, 750]}>
+    <Masonry brakePoints={[640, 1024]}>
       {items.map((item, idx) => (
         <Block {...item} />
       ))}
