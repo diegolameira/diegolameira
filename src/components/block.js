@@ -18,12 +18,15 @@ export default class Block extends PureComponent {
     return (
       <Box>
         <h2>
-          {title} <em>{`${startDate} ~ ${endDate}`}</em>
+          <em>{`${startDate} ~ ${endDate}`}</em>
+          {title}
         </h2>
         <h3>{subtitle}</h3>
         <ReactMarkdown source={description} />
         {(tags || []).map(tag => (
-          <Pill key={`box-${id}-${tag}`}>{tag}</Pill>
+          <Pill className="small" key={`box-${id}-${tag}`}>
+            {tag}
+          </Pill>
         ))}
       </Box>
     );
@@ -36,4 +39,12 @@ const Box = styled.div`
   margin-bottom: 4%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+
+  & > h2 {
+    font-weight: 500;
+    margin: 0;
+  }
+  & > h3 {
+    margin-top: 0.5em;
+  }
 `;

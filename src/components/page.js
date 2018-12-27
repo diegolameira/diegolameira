@@ -14,7 +14,6 @@ export default class extends PureComponent {
 }
 
 const Wrapper = styled.div`
-  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

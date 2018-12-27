@@ -1,10 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Sarabun:300,500|Source+Sans+Pro:300');
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  padding-bottom: 20px;
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.95) 20%,
+    rgba(255, 255, 255, 0.5) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 h1,
@@ -13,7 +29,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+  font-weight: 300;
+  font-family: 'Sarabun', sans-serif;
+  line-height: 1.2em;
 }
 
 table {
@@ -40,6 +58,7 @@ h3 > em,
 h3 > span {
   font-size: 0.5em;
   color: rgba(0, 0, 0, 0.3);
+  display: block;
 }
 
 header > h1,

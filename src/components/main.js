@@ -31,8 +31,8 @@ export default class Main extends Component {
 
 const Blocks = ({ title, items }) => (
   <Wrapper>
-    <h1>{title}</h1>
-    {items.map(item => (
+    <h1 className="sticky">{title}</h1>
+    {items.map((item, idx) => (
       <BlockWrapper key={item.id}>
         <Block {...item} />
       </BlockWrapper>
@@ -45,7 +45,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 
-  > h1 {
+  & > h1 {
     width: 100%;
   }
 `;
