@@ -5,8 +5,11 @@ import { ApolloProvider } from 'react-apollo';
 import { ThemeProvider } from 'styled-components';
 
 import ProfilePage from './profile';
+import LuxonSettings from 'luxon/src/settings';
 
 import './styles.css';
+
+LuxonSettings.defaultLocale = 'en';
 
 const client = new ApolloClient({
   uri: 'https://resumes-api.herokuapp.com/graphql'

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
-import DateTime from 'luxon/src/datetime.js';
+import DateTime from 'luxon/src/datetime';
+import { distanceInWords, distanceInWordsToNow } from 'date-fns';
 
 export default class ProfileContainer extends Component {
   constructor(props) {
@@ -69,16 +70,21 @@ const parseProfile = profile => {
         endDate: current ? 'onwards' : parseDate(endDate),
         startDate: parseDate(startDate),
         category,
+        duration: calcDuration(startDate, endDate, current),
+
         tags: tags.map(({ title }) => title)
       })
     )
   };
 };
 
+const calcDuration = (start, end, isCurrent) =>
+  isCurrent
+    ? distanceInWordsToNow(new Date(start))
+    : distanceInWords(new Date(start), new Date(end));
+
 const parseDate = date =>
-  DateTime.fromISO(date)
-    .setLocale('en')
-    .toLocaleString({ month: 'long', year: 'numeric' });
+  DateTime.fromISO(date).toLocaleString({ month: 'long', year: 'numeric' });
 
 const query = id => gql`
 {

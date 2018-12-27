@@ -12,13 +12,14 @@ export default class Block extends PureComponent {
       subtitle,
       startDate,
       endDate,
+      duration,
       description,
       tags
     } = this.props;
     return (
       <Box>
         <h2>
-          <em>{`${startDate} ~ ${endDate}`}</em>
+          <em>{`${startDate} ~ ${endDate} (${duration})`}</em>
           {title}
         </h2>
         <h3>{subtitle}</h3>
